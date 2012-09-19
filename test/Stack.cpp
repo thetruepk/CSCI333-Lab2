@@ -9,4 +9,11 @@ TEST(StackTest, Push) {
   delete s;
 }
 
+TEST(StackTest,arrayOverflow){
+  Stack* s = new Stack();
+  s->push(1);
+
+
+}
+
 
