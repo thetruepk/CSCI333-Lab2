@@ -13,10 +13,10 @@ TEST(StackTest, Push) {
 
 TEST(StackTest, arrayOverflow){
    Stack* s = new Stack();
-   for(int i = 0; i < 10; i++){
+   for(int i = 0; i < 19; i++){
      s->push(i);
    }
-   EXPECT_EQ(s->size(),10);
+   EXPECT_EQ(19,s->size());
    delete s;
 }
 

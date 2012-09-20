@@ -15,24 +15,24 @@ Stack::~Stack() {
 }
 
 void Stack::push(int value) {
-   //if theStack is full
+  //if theStack is full
   if(top == capacity){
-   // create new stack twice as big
-    Stack* temp = new Stack[top *2];
+  // create new stack twice as big
+    capacity = capacity *2;
+    temp = new int[capacity];
   // copy all elements to new stack
-    for(int i = 0; i < top; i++){
-      temp[i]=theStack[i];
+    int i = 0;
+    while((i)<= top){
+      temp[i] = theStack[i];
+      i++;
     }
-    
   // delete old stack
     delete[] theStack;
+    theStack = temp;
   //point old stack pointer to new stack
-    temp[top] = value;
-  }else{
-  //if NOT full this should run
- theStack[top] = value;
+ }
+  theStack[top] = value;
   top++;
-  } 
  }
 
 int Stack::pop() {

@@ -15,6 +15,7 @@ class Stack {
   int peek();
   int size();
   int capacity;
+  int* temp;
 };
 
 
