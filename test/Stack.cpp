@@ -13,7 +13,7 @@ TEST(StackTest, Push) {
 
 TEST(StackTest, arrayOverflow){
    Stack* s = new Stack();
-
+  
 
      EXPECT_EQ(1,0);
    delete s;
